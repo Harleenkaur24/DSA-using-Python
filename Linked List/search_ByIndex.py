@@ -1,14 +1,13 @@
-def find(self,value):
-          
+def __getitem__(self,index):
         if self.head==None:
             return 'Empty LL'
         
-        temp=self.head
         pos=0
+        temp=self.head
         while(temp!=None):
-            if(temp.data==value):
-                return pos 
+            if pos==index:
+                return temp.data
+            pos=pos+1
             temp=temp.next
-            pos = pos+1 
 
-        return 'Not found'
+        return 'Not index'
